@@ -1,0 +1,26 @@
+{
+  "name": "dart-lsp-marketplace",
+  "owner": {
+    "name": "Dariusz Mikulski",
+    "email": "dariusz.mikulski@gmail.com"
+  },
+  "metadata": {
+    "description": "Dart and Flutter code intelligence plugin for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "dart-lsp",
+      "source": ".",
+      "description": "Dart and Flutter code intelligence — LSP diagnostics, auto-formatting, project analysis, and specialized code review",
+      "version": "1.0.0",
+      "author": {
+        "name": "Dariusz Mikulski"
+      },
+      "homepage": "https://github.com/malcolmpl/dart-lsp",
+      "repository": "https://github.com/malcolmpl/dart-lsp",
+      "license": "MIT",
+      "keywords": ["dart", "flutter", "lsp", "code-intelligence", "analysis", "code-review"],
+      "category": "code-intelligence"
+    }
+  ]
+}
