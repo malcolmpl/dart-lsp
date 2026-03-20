@@ -92,6 +92,21 @@ The plugin is internally divided into two layers for future separation:
 - **LSP Layer** (`.lsp.json`) — Dart Analysis Server configuration, zero dependencies on Toolkit
 - **Toolkit Layer** (`hooks/`, `scripts/`, `skills/`, `agents/`) — automation and intelligence features, zero dependencies on LSP
 
+## Development
+
+After cloning, enable git hooks for auto version bumping:
+
+```bash
+git config core.hooksPath githooks
+```
+
+The `post-commit` hook automatically:
+- Bumps version in `plugin.json` and `marketplace.json` based on conventional commits (`feat:` → minor, `fix:`/`chore:` → patch, `BREAKING CHANGE` → major)
+- Only triggers when plugin files change (not docs/README)
+- Tags releases for `feat:` and `BREAKING CHANGE` commits
+- `[release]` in commit message forces a tag on any bump type
+- `[skip-bump]` skips version bumping entirely
+
 ## Documentation
 
 - `docs/superpowers/specs/` — design specification with architectural decisions
