@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "dart-lsp",
-      "source": ".",
+      "source": "./",
       "description": "Dart and Flutter code intelligence — LSP diagnostics, auto-formatting, project analysis, and specialized code review",
       "version": "1.0.0",
       "author": {
