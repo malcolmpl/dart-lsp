@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultilineEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "dart run ${CLAUDE_PLUGIN_ROOT}/scripts/dart-post-edit.dart"
+          }
+        ]
+      }
+    ]
+  }
+}
