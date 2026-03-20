@@ -42,3 +42,8 @@ The plugin is internally divided into two layers for future separation:
 
 - **LSP Layer** (`.lsp.json`) — Dart Analysis Server configuration, zero dependencies on Toolkit
 - **Toolkit Layer** (`hooks/`, `scripts/`, `skills/`, `agents/`) — automation and intelligence features, zero dependencies on LSP
+
+## Documentation
+
+- `docs/superpowers/specs/` — design specification with architectural decisions
+- `docs/superpowers/plans/` — implementation plan with task breakdown
