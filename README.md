@@ -5,7 +5,7 @@ A Claude Code plugin providing Dart and Flutter code intelligence.
 ## Features
 
 - **LSP Integration** — Dart Analysis Server providing real-time diagnostics, go-to-definition, find-references, hover information, and code completion
-- **Auto Fix/Format** — Automatically runs `dart fix --apply` and `dart format` after every `.dart` file edit. Note: `dart fix` runs on the full package and may take several seconds on large projects.
+- **Auto Fix/Format** — Automatically runs `dart fix --apply` and `dart format` after every `.dart` file edit. Note: `dart fix` rewrites any fixable issue across the entire package, not just the edited file. Review changes with `git diff` after edits. May take several seconds on large projects.
 - **Project Analysis** — `/dart-lsp:analyze` skill for deep project health assessment (dependencies, static analysis, code metrics)
 - **Code Review** — Specialized Dart/Flutter code review agent (`dart-reviewer`) with knowledge of Effective Dart, Flutter best practices, and common pitfalls
 
