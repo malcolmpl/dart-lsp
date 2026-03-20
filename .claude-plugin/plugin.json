@@ -1,0 +1,8 @@
+{
+  "name": "dart-lsp",
+  "description": "Dart and Flutter code intelligence — LSP diagnostics, auto-formatting, project analysis, and specialized code review",
+  "version": "1.0.0",
+  "author": { "name": "Dariusz" },
+  "keywords": ["dart", "flutter", "lsp", "code-intelligence", "analysis", "code-review"],
+  "license": "MIT"
+}

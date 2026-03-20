@@ -1,0 +1,23 @@
+{
+  "dart": {
+    "command": "dart",
+    "args": ["language-server", "--protocol=lsp"],
+    "extensionToLanguage": {
+      ".dart": "dart"
+    },
+    "initializationOptions": {
+      "suggestFromUnimportedLibraries": true,
+      "closingLabels": true,
+      "outline": true,
+      "flutterOutline": true
+    },
+    "settings": {
+      "dart.completeFunctionCalls": true,
+      "dart.enableSnippets": true,
+      "dart.showTodos": true,
+      "dart.documentation": "full"
+    },
+    "restartOnCrash": true,
+    "maxRestarts": 3
+  }
+}
