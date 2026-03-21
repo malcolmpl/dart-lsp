@@ -12,7 +12,7 @@
       "name": "dart-lsp",
       "source": "./",
       "description": "Dart and Flutter code intelligence — LSP diagnostics, auto-formatting, project analysis, and specialized code review",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Dariusz Mikulski"
       },
