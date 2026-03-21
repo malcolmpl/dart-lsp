@@ -31,19 +31,24 @@ void main() async {
       dir = dir.parent;
     }
 
-    // dart fix --apply on the package (if pubspec.yaml found)
+    // Track package root for Stop hook (dart fix --apply)
     if (packageRoot != null) {
-      final fixResult = await Process.run(
-        'dart',
-        ['fix', '--apply'],
-        workingDirectory: packageRoot.path,
+      final sessionId = json['session_id'] as String? ?? 'default';
+      final trackFile = File(
+        '${Directory.systemTemp.path}/dart-lsp-packages-$sessionId.txt',
       );
-      if (fixResult.exitCode != 0) {
-        stderr.writeln('dart fix failed: ${fixResult.stderr}');
+      final existing = trackFile.existsSync()
+          ? trackFile.readAsStringSync()
+          : '';
+      if (!existing.contains(packageRoot.path)) {
+        trackFile.writeAsStringSync(
+          '${packageRoot.path}\n',
+          mode: FileMode.append,
+        );
       }
     }
 
-    // dart format on the specific file
+    // dart format on the specific file (dart fix moved to Stop hook)
     final formatResult = await Process.run('dart', ['format', filePath]);
     if (formatResult.exitCode != 0) {
       stderr.writeln('dart format failed: ${formatResult.stderr}');
